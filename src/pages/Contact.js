@@ -1,15 +1,13 @@
-import React from "react";
-import "./Contact.css";
+import React from 'react';
 
-function Contact() {
+const Contact = () => {
   return (
-    <div className="contact">
-      <h1>Contact Me</h1>
-      <p>Email: arnabpanda3582@gmail.com</p>
-      <p>Phone: +91-7001269028</p>
-    </div>
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>Email: arnab@example.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/arnabpanda">linkedin.com/in/arnabpanda</a></p>
+    </section>
   );
-}
+};
 
 export default Contact;
-

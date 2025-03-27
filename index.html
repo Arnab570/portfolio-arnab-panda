@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arnab Panda Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Arnab Panda</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+			   <li class="nav-item"><a href="#about-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+			  <li class="nav-item"><a href="#Experience-section" class="nav-link"><span>Experience</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		<div class="home-slider owl-carousel">
+			<div class="slider-item">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/photo.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; height: 50px;">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Arnab Panda</span></h1>
+	
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+	
+								<script>
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+	
+									// Create an array of typing text
+									const typingTexts = [
+										'Power BI Developer  ',
+										'Data Analyst  ',
+										'Engineer  ',
+									];
+	
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+	
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+	
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+								</script>
+	
+								<br><br>
+								<h2>A Power BI Developer & Data Analyst</h2>
+	
+								<!-- Include Font Awesome -->
+								<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+								<style>
+									/* Hover Effect for Download CV */
+									.btn-primary {
+										background-color: #007bff;
+										border-color: #007bff;
+									}
+	
+									.btn-primary:hover {
+										background-color: #ff6600;
+										border-color: #ff6600;
+										color: white;
+									}
+	
+									/* Hover Effect for LinkedIn */
+									.btn-info {
+										background-color: #0077b5;
+										border-color: #0077b5;
+									}
+	
+									.btn-info:hover {
+										background-color: #004182;
+										border-color: #004182;
+										color: white;
+									}
+	
+									/* Bigger Icons */
+									.btn i {
+										margin-right: 8px;
+										font-size: 20px;
+									}
+								</style>
+	
+								<p>
+									<a href="https://drive.google.com/file/d/1Jp0KxNP9q-t4qG34_93mJqdAnf2MQKtU/view?usp=sharing" target="_blank" class="btn-custom py-3 px-4">
+										<i class="fa-solid fa-download fa-lg"></i> Download Resume
+									</a>
+	
+									<a href="https://www.linkedin.com/in/panda-arnab/" target="_blank" class="btn-custom py-3 px-4">
+										<i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
+									</a>
+	
+									<a href="mailto:arnabpanda3582@gmail.com" class="btn-custom py-3 px-4">
+										<i class="fa-solid fa-envelope fa-lg"></i> Email Me
+									</a>
+									<a href="tel:+917001269028" class="btn-custom py-3 px-4">
+										<i class="fa-solid fa-phone fa-lg"></i> +917001269028
+									</a>
+								</p>
+	
+								<style>
+									.btn-custom {
+										background: linear-gradient(135deg, #ff7eb3, #ff758c);
+										color: #fff;
+										padding: 15px 30px;
+										border-radius: 30px;
+										font-size: 18px;
+										font-weight: bold;
+										text-decoration: none;
+										display: inline-block;
+										transition: all 0.3s ease-in-out;
+										box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+										text-align: center;
+										margin: 10px;
+									}
+	
+									.btn-custom:hover {
+										background: linear-gradient(135deg, #ff758c, #ff7eb3);
+										box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+										transform: scale(1.05);
+									}
+	
+									.btn-custom i {
+										margin-right: 8px;
+									}
+								</style>
+	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/cropped_image.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Arnab  Panda</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Power BI Developer</span></p>
+										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+										<p><span class="title-s">Address: </span> <span>Kolkata, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s" style="font-size: 27px; font-weight: bold; color: #007bff;">Skills</p>
+
+									<span>Power BI & DAX </span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									
+									<div class="Data Visualization & Reporting">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL & Databases (MySQL, Oracle, Azure SQL)</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>ETL & Data Modelling</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100">
+									
+										</div>
+								
+									</div>
+									<span>Excel (Pivot Tables, Power Query)</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100">
+									
+										</div>
+									
+										
+										
+									
+									</div>Python</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100">
+									
+										</div>
+									
+										
+										
+									
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a Power BI Developer and Data Analyst with over 3.5 years of experience, currently working at Tata Consultancy Services (TCS). With a strong background in data analysis, reporting, and visualization, I specialize in Power BI, DAX, SQL, Python, and cloud-based ETL solutions.
+
+									At TCS, I have worked on end-to-end dashboard development, data modeling, and business intelligence solutions, helping organizations make data-driven decisions. I am passionate about optimizing data workflows, automating reports, and uncovering insights that drive business growth.</p>
+									<ul class="about-info mt-4 px-md-0 px-2">
+										<li class="d-flex"><span>Profile:</span> <span>Power BI Developer & Data Analyst</span></li>
+										<li class="d-flex"><span>Domain:</span> <span>Banking, Financial Services, Retail, Ecommerce</span></li>
+										<li class="d-flex"><span>Education:</span> <span>B.Tech in Computer Science & Engineering</span></li>
+										<li class="d-flex"><span>Languages:</span> <span>English, Hindi, Bengali</span></li>
+										<li class="d-flex"><span>BI & Analytics Tools:</span> <span>Microsoft Power BI, SQL, Excel (Power Query, Pivot Tables), Python (Pandas, NumPy)</span></li>
+										<li class="d-flex"><span>Other Skills:</span> <span>ETL, Data Modelling, Cloud (Azure), Git, JIRA, Business Analysis</span></li>
+										<li class="d-flex"><span>Interests:</span> <span>Traveling,Stock Market Analysis,Cricket</span></li>
+									</ul>
+									
+							</div>
+						</div>
+
+
+						
+								</p>
+								<!-- <p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Power BI Developer & Data Analyst with 3+ years of experience at Tata Consultancy Services (TCS), specializing in data visualization, business intelligence, and financial analytics. Skilled in Power BI, SQL, Python, and Excel, with expertise in ETL processes, dashboard development, and performance optimization.</p>
+					<a href="https://drive.google.com/file/d/1Jp0KxNP9q-t4qG34_93mJqdAnf2MQKtU/view?usp=sharing" 
+					class="btn btn-custom mt-3" 
+					target="_blank" 
+					rel="noopener noreferrer">
+					 <i class="fas fa-download"></i> Download Resume
+				 </a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<style>
+		.btn-custom {
+			background: linear-gradient(135deg, #6e8efb, #a777e3);
+			color: #fff;
+			padding: 12px 25px;
+			border-radius: 30px;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease-in-out;
+			box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+		}
+		
+		.btn-custom:hover {
+			background: linear-gradient(135deg, #a777e3, #6e8efb);
+			box-shadow: 0 6px 20px rgba(110, 142, 251, 0.6);
+			transform: scale(1.05);
+		}
+	</style>
+	
+	<section class="ftco-section ftco-no-pb" id="Experience-section"></section>
+	<div class="row">
+		<h1 class="big-4 text-white text-center">Experience</h1>
+		<!-- <div class="underline bg-warning mx-auto" style="width: 80px; height: 4px;"></div> -->
+	</div>
+	<br>
+	
+	<div class="row">
+		<!-- <h1 class="big-4">Experience</h1> -->
+		<div class="underline"></div>
+	</div>
+	<br>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="resume-wrap ftco-animate">
+				<span class="date">Aug, 2021 - Present</span>
+				<h2>Power BI Developer & Data Analyst</h2>
+				<span class="position">Tata Consultancy Services (TCS)</span>
+				<p class="mt-4"> 
+					<ul>
+						<li>Designed interactive Power BI dashboards to visualize project metrics, financial KPIs, and business trends, improving decision-making efficiency.</li>
+						<li>Automated defect tracking and incident reports, reducing manual reporting efforts by 40%.</li>
+						<li>Implemented Row-Level Security (RLS) in Power BI to ensure secure and role-based data access.</li>
+						<li>Integrated AI-driven Power BI features like Copilot, anomaly detection, and smart narratives for enhanced insights.</li>
+						<li>Optimized SQL queries and ETL pipelines to improve data processing efficiency, reducing report generation time.</li>
+						<li>Collaborated with global teams to enhance business intelligence solutions and streamline data workflows.</li>
+						<li>Optimized SQL queries and ETL pipelines to improve data processing efficiency, reducing report generation time.</li>
+						<li>Developed and automated weekly reports that focused on defect statuses (e.g., assigned, fixed, work in progress, ready for testing) and incident counts, delivering actionable data to business and technical teams.</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<br>
+	<br>
+	
+	
+	
+	
+	
+
+	<div class="row">
+		<h1 class="big-4">Education</h1>
+		<div class="underline"></div>
+	</div>
+	<br>
+	
+	<div class="row">
+		<div class="col-md-6">
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2017 - 2021</span>
+				<h2>Bachelor of Technology (B.Tech) in Computer Science & Engineering</h2>
+				<span class="position">Maulana Abul Kalam Azad University of Technology (MAKAUT)</span>
+				<p class="mt-4">CGPA: 8.07</p>
+			</div>
+			
+		</div>
+	
+		<div class="col-md-6">
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2016</span>
+				<h2>Higher Secondary Education (Class XII)</h2>
+				<span class="position">West Bengal Council of Higher Secondary Education(WBCHSE)</span>
+				<p class="mt-4">Percentage: 77.20%</p>
+			</div>
+		</div>
+	</div>
+	
+	
+   
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the Data Analytics and Software Development projects using SQL, Python, Power BI, and Java.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/yourgithub/election-analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/yourgithub/election-analysis">Election Results Data Analysis</a></h3>
+							<p>Analyzed election data using SQL and Python to identify voting patterns and trends across different regions.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/yourgithub/credit-card-analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/yourgithub/credit-card-analysis">Credit Card Customer Segmentation</a></h3>
+							<p>Performed customer segmentation using Python and machine learning to optimize financial services offerings.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/yourgithub/powerbi-dashboard" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/yourgithub/powerbi-dashboard">Financial Dashboard using Power BI</a></h3>
+							<p>Designed an interactive Power BI dashboard to track financial transactions and customer spending behavior.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row d-flex justify-content-center">  
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/yourgithub/java-banking-app" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/yourgithub/java-banking-app">Banking System Application (Java & Spring Boot)</a></h3>
+							<p>Developed a microservices-based banking application using Java Spring Boot, Hibernate, and REST APIs.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/yourgithub/stock-analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/yourgithub/stock-analysis">Stock Market Analysis using Python</a></h3>
+							<p>Performed technical and fundamental stock analysis using Python to identify high-growth investment opportunities.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section" 
+    style="background: url('images/bg_1.jpg') no-repeat center center/cover; color: white; padding: 100px 0;">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Get In Touch</h2>
+                <p>Feel free to reach out for any queries or collaborations!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Contact Details (Left Side) -->
+            <div class="col-md-5 d-flex align-items-center">
+                <div class="p-4 shadow-lg border-0 rounded-3 w-100" style="background: rgba(0, 0, 0, 0.7); color: white;">
+                    <h2 style="font-size: 2rem; font-weight: bold;">📞 My Contact Details</h2>
+                    <p style="font-size: 1.2rem;"><strong>📍 Location:</strong> Kolkata, West Bengal, India</p>
+                    <p style="font-size: 1.2rem;"><strong>📧 Email:</strong> <a href="mailto:arnabpanda3582@gmail.com" style="color: #00aaff; text-decoration: none;">arnabpanda3582@gmail.com</a></p>
+                    <p style="font-size: 1.2rem;"><strong>📞 Phone:</strong> <a href="tel:+917001269028" style="color: #00aaff; text-decoration: none;">+91 7001269028</a></p>
+                </div>
+            </div>
+
+            <!-- Contact Form (Right Side) -->
+            <div class="col-md-7">
+                <div class="card p-4 shadow-lg border-0 rounded-3" style="background: rgba(0, 0, 0, 0.7); color: white;">
+                    <form action="send_email.php" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary py-2">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+	
+
+		
+		<style>
+			.contact-section {
+				background: #f8f9fa;
+			}
+			.contact-section h2 {
+				font-size: 2.2rem;
+				font-weight: bold;
+			}
+			.card {
+				background: white;
+				border-radius: 10px;
+			}
+		</style>
+		
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made  </i> by Arnab Panda</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

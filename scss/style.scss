@@ -109,13 +109,12 @@ h1, h2, h3, h4, h5,
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.container{
-		width: 1110px;
-		margin: 0 auto;
-		padding: 0;
-		@include media-breakpoint-up(lg){
-		}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center; /* Ensure vertical alignment */
 	}
+	
 
 	.navbar-brand {
 		color: $white;
@@ -450,71 +449,13 @@ h1, h2, h3, h4, h5,
 				@include media-breakpoint-down(md){
 					text-align: center;
 				}
-				.one-third{
-					width: 60%;
-					position: relative;
-					// height: 650px;
-					z-index: -1;
-					.overlay{
-						position: absolute;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						background: $black;
-						opacity: 0;
+				.one-third {
+					flex: 0 0 60%; /* Takes up 60% of the container by default */
+				 
+					.one-forth {
+						flex: 0 0 100%; /* Will take up 100% of the container when the other section is removed */
+						/* Adjust if needed */
 					}
-					@include media-breakpoint-down(lg){
-						width: 85%;
-					}
-					@include media-breakpoint-down(md){
-						width: 100%;
-						z-index: 0;
-						.overlay{
-							opacity: .3;
-						}
-						&:after{
-							opacity: 0;
-						}
-					}
-				}
-				.one-forth{
-					width: 50%;
-					position: relative;
-					@include media-breakpoint-up(md){
-						position: absolute;
-						top: 0;
-						left: 0;
-						bottom: 0;
-						right: 0;
-						width: 1200px;
-						margin: 0 auto;
-					}
-					@include media-breakpoint-down(md){
-						width: 100%;
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						z-index: 1;
-						padding: 1em;
-					}
-					.text{
-						width: 100%;
-						@include media-breakpoint-up(lg){
-							position: absolute;
-							top: 50%;
-							left: 0;
-							transform: translateY(-50%);
-							right: 0;
-							// width: 1200px;
-							max-width: 50%;
-							padding-left: 45px;
-							padding-right: 3em;
-						}
-					}
-				}
 				// .icon-video{
 				// 	position: absolute;
 				// 	top: 120px;

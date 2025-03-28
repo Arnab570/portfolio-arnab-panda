@@ -109,12 +109,22 @@ h1, h2, h3, h4, h5,
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+<<<<<<< HEAD
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center; /* Ensure vertical alignment */
 	}
 	
+=======
+	.container{
+		width: 1110px;
+		margin: 0 auto;
+		padding: 0;
+		@include media-breakpoint-up(lg){
+		}
+	}
+>>>>>>> de3c94b4749e0021fcbdb2f42320fa7c8d2ff7a2
 
 	.navbar-brand {
 		color: $white;
